@@ -70,9 +70,7 @@ class Question : AppCompatActivity(){
                 TODO("Not yet implemented")
             }
                 }
-        binding.button.setOnClickListener{
-            Click()
-        }
+
 
     }
 
