@@ -27,15 +27,16 @@ class Question : AppCompatActivity(){
         binding = ActivityQuestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val decide = arrayOf( "Do you have dry cough", "Yes", "No")
-        val decide2 = arrayOf( "Do you have Fever", "Yes", "No")
+        val decide = arrayOf("", "Yes", "No")
 
         val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, decide)
-        val arrayAdapter2 = ArrayAdapter(this, android.R.layout.simple_spinner_item, decide2)
 
-        binding.spinner.adapter = arrayAdapter
-        binding.spinner2.adapter = arrayAdapter2
-
+        binding.spinner.adapter =  arrayAdapter
+        binding.spinner2.adapter = arrayAdapter
+        binding.spinner3.adapter = arrayAdapter
+        binding.spinner4.adapter = arrayAdapter
+        binding.spinner5.adapter = arrayAdapter
+        binding.spinner6.adapter = arrayAdapter
 
         binding.spinner.onItemSelectedListener = object :
 
