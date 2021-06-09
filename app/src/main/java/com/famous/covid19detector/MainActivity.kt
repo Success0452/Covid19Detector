@@ -17,5 +17,9 @@ class MainActivity : AppCompatActivity() {
         binding.checkBtn.setOnClickListener{
             startActivity(Intent(this, Question::class.java))
         }
+
+        binding.maleriaBtn.setOnClickListener{
+            startActivity(Intent(this, MaleriaActivity::class.java))
+        }
     }
 }

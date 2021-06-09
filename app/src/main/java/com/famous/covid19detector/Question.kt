@@ -31,12 +31,16 @@ class Question : AppCompatActivity(){
 
         val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, decide)
 
+        //setting adapter on spinner
         binding.spinner.adapter =  arrayAdapter
         binding.spinner2.adapter = arrayAdapter
         binding.spinner3.adapter = arrayAdapter
         binding.spinner4.adapter = arrayAdapter
         binding.spinner5.adapter = arrayAdapter
         binding.spinner6.adapter = arrayAdapter
+        binding.spinner7.adapter = arrayAdapter
+        binding.spinner8.adapter = arrayAdapter
+
 
         binding.spinner.onItemSelectedListener = object :
 
