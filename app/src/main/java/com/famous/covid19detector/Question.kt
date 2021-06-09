@@ -40,6 +40,9 @@ class Question : AppCompatActivity(){
         binding.spinner6.adapter = arrayAdapter
         binding.spinner7.adapter = arrayAdapter
         binding.spinner8.adapter = arrayAdapter
+        binding.spinner9.adapter = arrayAdapter
+        binding.spinner10.adapter = arrayAdapter
+
 
 
         binding.spinner.onItemSelectedListener = object :

@@ -21,5 +21,6 @@ class MainActivity : AppCompatActivity() {
         binding.maleriaBtn.setOnClickListener{
             startActivity(Intent(this, MaleriaActivity::class.java))
         }
+
     }
 }
