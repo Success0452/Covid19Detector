@@ -19,6 +19,7 @@ class Question : AppCompatActivity(){
 
     private var yes = ""
     private var no = ""
+    private var non = ""
 
     private lateinit var binding: ActivityQuestionBinding
 
@@ -42,6 +43,8 @@ class Question : AppCompatActivity(){
         binding.spinner8.adapter = arrayAdapter
         binding.spinner9.adapter = arrayAdapter
         binding.spinner10.adapter = arrayAdapter
+        binding.spinner11.adapter = arrayAdapter
+
 
 
 
@@ -49,14 +52,9 @@ class Question : AppCompatActivity(){
 
                 AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                selected = parent!!.getItemAtPosition(position) as String
-                select = when (selected) {
-                    "Yes" -> yes
-                    "No" -> no
-                    else ->  "none"
-                }
-            }
+                 select = parent!!.getItemAtPosition(position) as String
 
+            }
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
@@ -78,18 +76,23 @@ class Question : AppCompatActivity(){
                 TODO("Not yet implemented")
             }
                 }
+        binding.processBtn.setOnClickListener{
+            if(select == "yes"){
+                binding.result.text = "Go on"
+            }  else {
+                binding.result.text = "Go Out"
+            }
+            Toast.makeText(this, select, Toast.LENGTH_SHORT).show()
+        }
 
 
     }
 
     private fun Click() {
-        val er = select + select2
-        val et = select
 
-        when(selected){
-            er -> binding.textView.text = "You Have Covid19"
-            et -> binding.textView.text = "You Dont Have Covid19"
-        }
+
+
+        
     }
 
 
