@@ -45,9 +45,6 @@ class Question : AppCompatActivity(){
         binding.spinner10.adapter = arrayAdapter
         binding.spinner11.adapter = arrayAdapter
 
-
-
-
         binding.spinner.onItemSelectedListener = object :
 
                 AdapterView.OnItemSelectedListener{
