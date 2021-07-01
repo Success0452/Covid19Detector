@@ -25,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
     //FirebaseAuth
     private lateinit var firebaseAuth : FirebaseAuth
+
     private var email = ""
     private var password = ""
 
