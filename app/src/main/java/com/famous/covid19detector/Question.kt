@@ -12,14 +12,23 @@ import com.famous.covid19detector.databinding.ActivityQuestionBinding
 
 class Question : AppCompatActivity(){
 
-    private var select = ""
-    private var select2 = ""
+    private lateinit var select : String
+    private lateinit var select2 : String
+    private lateinit var select3 : String
+    private lateinit var select4 : String
+    private lateinit var select5 : String
+    private lateinit var select6 : String
+    private lateinit var select7 : String
+    private lateinit var select8 : String
+    private lateinit var select9 : String
+    private lateinit var select10 : String
+    private lateinit var select11 : String
 
-    private var selected = ""
 
-    private var yes = ""
-    private var no = ""
-    private var non = ""
+    private lateinit var selected :String
+
+    private lateinit var yes : String
+    private lateinit var no : String
 
     private lateinit var binding: ActivityQuestionBinding
 
@@ -50,7 +59,6 @@ class Question : AppCompatActivity(){
                 AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                  select = parent!!.getItemAtPosition(position) as String
-
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 TODO("Not yet implemented")
@@ -61,82 +69,138 @@ class Question : AppCompatActivity(){
 
                 AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                selected = parent!!.getItemAtPosition(position) as String
-               select2 =  when (selected) {
-                    "Yes" -> yes
-                    "No" -> no
-                   else -> "none"
-               }
+                select2 = parent!!.getItemAtPosition(position) as String
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
                 }
-        binding.processBtn.setOnClickListener{
-            if(select == "yes"){
-                binding.result.text = "Go on"
-            }  else {
-                binding.result.text = "Go Out"
+
+        binding.spinner3.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                select3 = parent!!.getItemAtPosition(position) as String
             }
-            Toast.makeText(this, select, Toast.LENGTH_SHORT).show()
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner4.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                select4 = parent!!.getItemAtPosition(position) as String
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner5.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                select5 = parent!!.getItemAtPosition(position) as String
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner6.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                select6 = parent!!.getItemAtPosition(position) as String
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner7.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                select7 = parent!!.getItemAtPosition(position) as String
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner8.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                select8 = parent!!.getItemAtPosition(position) as String
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner9.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                select9 = parent!!.getItemAtPosition(position) as String
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner10.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                select10 = parent!!.getItemAtPosition(position) as String
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+        binding.spinner11.onItemSelectedListener = object :
+
+            AdapterView.OnItemSelectedListener{
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                select11 = parent!!.getItemAtPosition(position) as String
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
+
+
+// Initialize the process Button
+
+        binding.processBtn.setOnClickListener{
+            if(select == select4 && select4 == select9){
+                binding.result.text = "Covid19 Alert, Call 119"
+            }  else {
+                binding.result.text = "You Have Maleria \n Go Visit a Doctor"
+            }
         }
 
 
     }
 
     private fun Click() {
-
-
-
-        
     }
-
-
-//    private fun setupSimpleSpinner() {
-//           val adapter1 = ArrayAdapter.createFromResource(this,
-//                R.array.decide,
-//                android.R.layout.simple_spinner_item)
-//              adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//
-//        val adapter2 = ArrayAdapter.createFromResource(this,
-//                R.array.decide2,
-//                android.R.layout.simple_spinner_item)
-//        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//
-//
-//
-//        binding.spinner.adapter = adapter1
-//        binding.spinner2.adapter = adapter2
-//
-//        binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//               var selectedItem = parent!!.getItemAtPosition(position)
-//            }
-//
-//
-//                override fun onNothingSelected(parent: AdapterView<*>?) {
-//                TODO("Not yet implemented")
-//            }
-//
-//        }
-//
-//        binding.spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-//                var selectedItem = parent!!.getItemAtPosition(position)
-//            }
-//
-//
-//            override fun onNothingSelected(parent: AdapterView<*>?) {
-//                TODO("Not yet implemented")
-//            }
-//
-//        }
-//
-//
-//    }
-
-
 
 }
